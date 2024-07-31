@@ -2,14 +2,19 @@
 <html>
   <head>
     <title>Home</title>
+    <script>
+      function openNewWindow(url) {
+        window.open(url, "_blank");
+      }
+    </script>
   </head>
   <body>
     <h1>This is Home</h1>
     <div>
       <ul>
-        <li><a href="pageA.html" target="_blank">Page A</a></li>
-        <li><a href="pageB.html" target="_blank">Page B</a></li>
-        <li><a href="pageC.html" target="_blank">Page C</a></li>
+        <li><button onclick="openNewWindow('pageA.html')">Page A</button></li>
+        <li><button onclick="openNewWindow('pageB.html')">Page B</button></li>
+        <li><button onclick="openNewWindow('pageC.html')">Page C</button></li>
       </ul>
     </div>
   </body>

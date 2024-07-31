@@ -2,9 +2,16 @@
 <html>
   <head>
     <title>Home</title>
-    <script>
+    <script type="text/javascript">
       function openNewWindow(url) {
         window.open(url, "_blank");
+      }
+      function postOpen(name) {
+        window.open("about:blank", name, "width=400, height=350");
+        document.getElementById(name).action = `/${name}.html`;
+        document.getElementById(name).method = "GET";
+        document.getElementById(name).target = name;
+        document.getElementById(name).submit();
       }
     </script>
   </head>
@@ -12,9 +19,9 @@
     <h1>This is Home</h1>
     <div>
       <ul>
-        <li><button onclick="openNewWindow('pageA.html')">Page A</button></li>
-        <li><button onclick="openNewWindow('pageB.html')">Page B</button></li>
-        <li><button onclick="openNewWindow('pageC.html')">Page C</button></li>
+        <li><button onclick="postOpen('pageA')">Page A</button></li>
+        <li><button onclick="postOpen('pageB')">Page B</button></li>
+        <li><button onclick="postOpen('pageC')">Page C</button></li>
       </ul>
     </div>
   </body>
